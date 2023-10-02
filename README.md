@@ -46,7 +46,7 @@ demo can be started in development mode and in production mode as well.
 Clone this repo to your local machine
 
 ```
-git clone https://github.com/rodolfogordo10/app-form
+git clone https://github.com/rodolfogordo10/app-form.git
 ```
 
 Before we run our container lets calm down our editor and npm install dependecies locally.
