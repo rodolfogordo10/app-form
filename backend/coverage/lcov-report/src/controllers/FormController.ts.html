@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">92.3% </span>
+                <span class="strong">30.76% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>12/13</span>
+                <span class='fraction'>4/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">92.3% </span>
+                <span class="strong">30.76% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/13</span>
+                <span class='fraction'>4/13</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -108,25 +108,25 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -142,26 +142,26 @@ import formSchema from "../validation/FormValidation";
 export class FormController {
   constructor(private formService: FormService) {}
 &nbsp;
-  async create(req: Request, res: Response): Promise&lt;Response&gt; {
-    const { name, document, email, color, observation } = req.body;
+<span class="fstat-no" title="function not covered" >  async </span>create(req: Request, res: Response): Promise&lt;Response&gt; {
+    const { name, cpf, email, color, observation } = <span class="cstat-no" title="statement not covered" >req.body;</span>
 &nbsp;
-    try {
-      const form: IForm = {
+<span class="cstat-no" title="statement not covered" >    try {</span>
+      const form: IForm = <span class="cstat-no" title="statement not covered" >{</span>
         name: name,
-        document: document,
+        cpf: cpf,
         email: email,
         color: color,
         observation: observation,
       };
 &nbsp;
-      await formSchema.validate(form);
+<span class="cstat-no" title="statement not covered" >      await formSchema.validate(form);</span>
 &nbsp;
-      await this.formService.execute(form);
+<span class="cstat-no" title="statement not covered" >      await this.formService.execute(form);</span>
 &nbsp;
-      return res.status(201).send();
+<span class="cstat-no" title="statement not covered" >      return res.status(201).send();</span>
     } catch (err: any) {
-      if (err instanceof ValidationError) {
-        return res.status(400).json({ error: (err as ValidationError).errors });
+<span class="cstat-no" title="statement not covered" >      <span class="missing-if-branch" title="if path not taken" >I</span>if (err instanceof ValidationError) {</span>
+<span class="cstat-no" title="statement not covered" >        return res.status(400).json({ error: (err as ValidationError).errors });</span>
       }
 &nbsp;
 <span class="cstat-no" title="statement not covered" >      return res.status(500).json({ error: err.message });</span>
@@ -175,7 +175,7 @@ export class FormController {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-10-01T05:59:09.821Z
+                at 2023-10-02T07:07:34.585Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

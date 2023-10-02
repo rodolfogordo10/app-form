@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">15.38% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/5</span>
+                <span class='fraction'>2/13</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">15.38% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>4/5</span>
+                <span class='fraction'>2/13</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -96,30 +96,21 @@
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
 <a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -127,38 +118,47 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// import { pool } from "../index";
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { pool } from "../../config";
 import { IForm } from "../../interfaces/IFormInterface";
 &nbsp;
 import { IFormRepository } from "../IFormRepository";
 &nbsp;
 export class PostgresUsersRepository implements IFormRepository {
-  async save(form: IForm): Promise&lt;void&gt; {
-    // const client = await pool.connect();
+<span class="fstat-no" title="function not covered" >  async </span>save(form: IForm): Promise&lt;void&gt; {
+    const client = <span class="cstat-no" title="statement not covered" >await pool.connect();</span>
 &nbsp;
-    try {
-      // await client.query("BEGIN"); // Inicia a transação
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >      await client.query("BEGIN"); </span>// Inicia a transação
 &nbsp;
-      // const formInsert = Object.keys(form).map(function (key) {
-      //   return [Number(key), form[key]];
-      // });
+      const formInsert = <span class="cstat-no" title="statement not covered" >Object.keys(form).map(<span class="fstat-no" title="function not covered" >function (k</span>ey) {</span>
+        // @ts-ignore
+<span class="cstat-no" title="statement not covered" >        return [Number(key), form[key]];</span>
+      });
 &nbsp;
       // Execute suas operações de banco de dados aqui
-      const query = `INSERT INTO usuarios
-        (id, name, document, email, color, observation, createdAt) VALUES 
-        ($1, $2, $3, $4, $5, $6, $7)`;
+      const query = <span class="cstat-no" title="statement not covered" >`INSERT INTO form</span>
+        (name, cpf, email, color, observation, createdAt) VALUES 
+        ($1, $2, $3, $4, $5, $6)`;
 &nbsp;
-      console.log(query, form);
-      // await pool.query(query, formInsert);
+<span class="cstat-no" title="statement not covered" >      await pool.query(query, formInsert);</span>
 &nbsp;
-      // await client.query("COMMIT"); // Confirma a transação
+<span class="cstat-no" title="statement not covered" >      await client.query("COMMIT"); </span>// Confirma a transação
     } catch (error) {
-      // await client.query("ROLLBACK"); // Reverte a transação em caso de erro
+<span class="cstat-no" title="statement not covered" >      await client.query("ROLLBACK"); </span>// Reverte a transação em caso de erro
 <span class="cstat-no" title="statement not covered" >      console.error("Erro durante a transação:", error);</span>
     } finally {
-      // client.release(); // Libera a conexão de volta para o pool
+<span class="cstat-no" title="statement not covered" >      client.release(); </span>// Libera a conexão de volta para o pool
     }
   }
 }
@@ -169,7 +169,7 @@ export class PostgresUsersRepository implements IFormRepository {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-10-01T05:59:09.821Z
+                at 2023-10-02T07:07:34.585Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

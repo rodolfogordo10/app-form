@@ -12,7 +12,7 @@
   "scripts": {
     "test": "jest --silent --coverage",
     "coverage": "jest && open ./coverage/lcov-report/index.html",
-    "start": "node dist/app.js",
+    "start": "nodemon src/app.ts",
     "build": "babel src --out-dir dist --no-copy-ignored",
     "dev": "nodemon --watch src/ --exec ts-node src/app.ts -e ts"
   },
