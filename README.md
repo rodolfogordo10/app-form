@@ -37,7 +37,7 @@ app-form
 
 ## Demo
 
-Demo is a simple Todolist using React and styled-components on client side, nest on backend and postgres as our database
+Demo is a simple Todolist using React and styled-components on client side, express on backend and postgres as our database
 demo can be started in development mode and in production mode as well.
 
 
