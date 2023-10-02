@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "githubPullRequests.ignoredPullRequestBranches": [
+    "develop"
+  ],
+  "svg.preview.background": "editor"
+}
