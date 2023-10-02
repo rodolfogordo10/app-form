@@ -62,7 +62,7 @@ cd app-form/backend && npm i
 cd ../frontend && npm i
 ```
 
-Now Let's check our Demo, for that run the following command
+Now Let's check our App Form, for that run the following command
 
 ```bash
 cd ../ && docker-compose.yml up --build
