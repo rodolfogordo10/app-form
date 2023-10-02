@@ -35,9 +35,9 @@ app-form
     README.md
 ```
 
-## Demo
+## APP Form
 
-Demo is a simple Todolist using React and styled-components on client side, express on backend and postgres as our database
+App Form is a simple registration using React and styled-components on client side, express on backend and postgres as our database
 appform can be started in development mode and in production mode as well.
 
 
