@@ -1,4 +1,5 @@
-![5c155200-8d85-11eb-9294-630eada53a01](https://github.com/rodolfogordo10/app-form/assets/11947679/9aee74bc-8e03-4cff-ba0c-672f83cc154f)
+
+![1_nSuwUaZxQyBsN3-eUwudSg](https://github.com/rodolfogordo10/app-form/assets/11947679/2c379ba3-93f8-4ea8-9d66-e02360bbe0d5)
 
 ### Introduction
 
