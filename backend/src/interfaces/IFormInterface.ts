@@ -5,5 +5,5 @@ export interface IForm {
   email: string;
   color: string;
   observation: string;
-  createdAt?: Date;
+  createdAt?: string;
 }

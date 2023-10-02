@@ -9,8 +9,6 @@ services:
       - "3000:3000"
     depends_on:
       - backend
-    networks:
-      - app-form
   backend:
     build:
       context: ./backend
@@ -21,25 +19,19 @@ services:
     environment:
       POSTGRES_HOST: postgres
       POSTGRES_PORT: 5432
-      POSTGRES_DB: mydb
+      POSTGRES_DB: appForm
       POSTGRES_USER: form
       POSTGRES_PASSWORD: testeForm
     depends_on:
       - postgres
-    networks:
-      - app-form
   postgres:
     image: postgres:latest
     container_name: postgres
+    volumes:
+      - ./db/postgres/script.sql:/docker-entrypoint-initdb.d/script.sql
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_DB: mydb
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-    networks:
-      - app-form
-
-networks:
-  app-form:
-    external : true
+      POSTGRES_DB: appForm
+      POSTGRES_USER: form
+      POSTGRES_PASSWORD: testeForm
